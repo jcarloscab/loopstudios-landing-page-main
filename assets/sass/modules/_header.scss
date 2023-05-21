@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-position: center;
+  padding: 50px 100px 0px 100px;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $white;
+    border: 2px solid $white;
+    width: 670px;
+    font-size: 5rem;
+    margin-top: 130px;
+    padding: 25px;
+  }
+}

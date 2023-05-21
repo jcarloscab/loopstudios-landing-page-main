@@ -1,0 +1,32 @@
+// main menu
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      display: block;
+      width: 1px;
+      height: 2px;
+      background-color: transparent;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(25);
+        background-color: $white;
+      }
+    }
+  }
+}
