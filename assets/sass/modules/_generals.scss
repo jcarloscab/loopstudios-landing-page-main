@@ -7,6 +7,23 @@
 html {
   font-family: "Alata", sans-serif;
   font-size: 15px;
+  color: $black;
+}
+
+body {
+  background-color: $white;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .title {
