@@ -5,6 +5,7 @@
   border: 1px solid hsl(0, 0%, 0%);
   letter-spacing: 0.3rem;
   font-weight: 600;
+  transition: all 0.3s;
 }
 .button:hover {
   cursor: pointer;
@@ -121,6 +122,35 @@
   bottom: 35px;
 }
 
+.social-nets {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+}
+.social-nets__link {
+  position: relative;
+}
+.social-nets__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  height: 2px;
+  width: 1px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.social-nets__link:hover::after {
+  transform: scaleX(25);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.address {
+  font-style: normal;
+  color: hsl(0, 0%, 55%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -178,4 +208,32 @@ h3 {
   width: 85%;
   margin: auto;
   margin-top: 160px;
+}
+
+.footer {
+  background-color: hsl(0, 0%, 0%);
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.footer-container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  width: 145px;
+  margin-bottom: 20px;
+}
+.footer__links {
+  width: 40%;
+}
+.footer__menu {
+  justify-content: flex-start;
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
 }/*# sourceMappingURL=styles.css.map */
