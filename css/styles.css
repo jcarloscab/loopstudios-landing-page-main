@@ -47,16 +47,10 @@ h3 {
   font-weight: 300;
 }
 
-@media screen and (max-width: 375px) {
-  .logo {
-    z-index: 10;
-  }
-}
-
 .button {
   background-color: hsl(0, 0%, 100%);
   text-transform: uppercase;
-  padding: 10px 30px 10px 30px;
+  padding: 0 30px 0 30px;
   border: 1px solid hsl(0, 0%, 0%);
   letter-spacing: 0.3rem;
   font-weight: 600;
@@ -74,32 +68,20 @@ h3 {
   align-items: center;
   gap: 40px;
 }
-@media screen and (max-width: 768px) {
-  .main-menu {
-    gap: 20px;
-  }
-}
 @media screen and (max-width: 375px) {
   .main-menu {
     position: fixed;
     top: 0;
     left: 100%;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 60px;
+    padding-top: 25px;
     padding-left: 25px;
     width: 100%;
     height: 100vh;
     background-color: hsl(0, 0%, 0%);
-    z-index: 5;
-    transition: left 0.3s;
-  }
-}
-@media screen and (max-width: 375px) {
-  .main-menu--open {
-    left: 0;
   }
 }
 .main-menu__close {
@@ -109,23 +91,13 @@ h3 {
 @media screen and (max-width: 375px) {
   .main-menu__close {
     display: block;
-    align-self: flex-end;
-    margin-right: 25px;
-    margin-bottom: 100px;
+    align-self: center;
   }
 }
 .main-menu__link {
   color: hsl(0, 0%, 100%);
   text-decoration: none;
   position: relative;
-}
-@media screen and (max-width: 375px) {
-  .main-menu__link {
-    font-family: "Josefin Sans", sans-serif;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 2rem;
-  }
 }
 .main-menu__link::after {
   content: "";
@@ -141,11 +113,6 @@ h3 {
 .main-menu__link:hover::after {
   transform: scaleX(25);
   background-color: hsl(0, 0%, 100%);
-}
-@media screen and (max-width: 375px) {
-  .main-menu__link:hover::after {
-    transform: scaleX(70);
-  }
 }
 
 .banner {
@@ -189,12 +156,7 @@ h3 {
   .banner__content {
     position: inherit;
     width: 100%;
-    padding: 25px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .banner__title {
-    text-align: center;
+    padding: 25px 0 25px 25px;
   }
 }
 .banner__description {
@@ -208,57 +170,10 @@ h3 {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 375px) {
-  .banner__description {
-    text-align: center;
-  }
-}
 
 .gallery {
   margin-top: 185px;
   margin-bottom: 185px;
-}
-@media screen and (max-width: 375px) {
-  .gallery {
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .gallery__title {
-    text-align: center;
-  }
-}
-.gallery-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: -40px;
-}
-@media screen and (max-width: 768px) {
-  .gallery-container {
-    margin-top: -20px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .gallery-container {
-    margin-top: 0;
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-}
-.gallery__all {
-  align-self: flex-end;
-}
-@media screen and (max-width: 768px) {
-  .gallery__all {
-    margin-right: 30px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .gallery__all {
-    margin-right: unset;
-    align-self: center;
-  }
 }
 .gallery__content {
   margin-top: 95px;
@@ -276,7 +191,6 @@ h3 {
 }
 @media screen and (max-width: 375px) {
   .gallery__content {
-    margin-top: 40px;
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -401,26 +315,22 @@ h3 {
   width: 100%;
   height: 100vh;
   background-image: url(../images/desktop/image-hero.jpg);
-  background-size: cover;
   background-position: center;
   padding: 50px 100px 0px 100px;
 }
 @media screen and (max-width: 768px) {
   .header {
-    background-position: center;
-    padding: 25px 50px 50px 50px;
+    padding: 25px 50px 0px 50px;
   }
 }
 @media screen and (max-width: 375px) {
   .header {
-    height: 100vh;
     background-image: url(../images/mobile/image-hero.jpg);
     background-size: cover;
-    background-position: 0 0;
-    padding: 60px 25px 0 25px;
+    padding: 50px 25px 0 25px;
   }
 }
-.header__top {
+.header-top {
   display: flex;
   justify-content: space-between;
 }
@@ -436,10 +346,9 @@ h3 {
     width: 400px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .header__title {
-    width: 320px;
-    padding: 15px;
+    width: 325px;
   }
 }
 
@@ -457,11 +366,6 @@ h3 {
   width: 85%;
   margin: auto;
   margin-top: 160px;
-}
-@media screen and (max-width: 375px) {
-  .main {
-    margin-top: 100px;
-  }
 }
 
 .footer {

@@ -2,10 +2,24 @@
   width: 100%;
   height: 100vh;
   background-image: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
   background-position: center;
   padding: 50px 100px 0px 100px;
 
-  &-top {
+  @include queries.tablet {
+    background-position: center;
+    padding: 25px 50px 50px 50px;
+  }
+
+  @include queries.mobile {
+    height: 100vh;
+    background-image: url(../images/mobile/image-hero.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    padding: 60px 25px 0 25px;
+  }
+
+  &__top {
     display: flex;
     justify-content: space-between;
   }
@@ -16,5 +30,23 @@
     width: 670px;
     margin-top: 130px;
     padding: 25px;
+
+    @include queries.tablet {
+      width: 400px;
+    }
+
+    @include queries.mobile {
+      width: 320px;
+      padding: 15px;
+    }
+  }
+}
+
+.open-menu {
+  display: none;
+
+  @include queries.mobile {
+    display: block;
+    height: 24px;
   }
 }

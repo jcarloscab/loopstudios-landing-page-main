@@ -16,10 +16,22 @@ body {
 
 h1 {
   font-size: 5rem;
+
+  @include queries.tablet {
+    font-size: 3rem;
+  }
+
+  @include queries.mobile {
+    font-size: 2.7rem;
+  }
 }
 
 h2 {
   font-size: 3rem;
+
+  @include queries.tablet {
+    font-size: 2rem;
+  }
 }
 
 h3 {

@@ -1,7 +1,13 @@
+.logo {
+  @include queries.mobile {
+    z-index: 10;
+  }
+}
+
 .button {
   background-color: $white;
   text-transform: uppercase;
-  padding: 0 30px 0 30px;
+  padding: 10px 30px 10px 30px;
   border: 1px solid $black;
   letter-spacing: 0.3rem;
   font-weight: 600;
@@ -20,10 +26,56 @@
   align-items: center;
   gap: 40px;
 
+  @include queries.tablet {
+    gap: 20px;
+  }
+
+  @include queries.mobile {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 25px;
+    width: 100%;
+    height: 100vh;
+    background-color: $black;
+    z-index: 5;
+    transition: left 0.3s;
+  }
+
+  &--open {
+    @include queries.mobile {
+      left: 0;
+    }
+  }
+
+  &__close {
+    width: 24px;
+    display: none;
+
+    @include queries.mobile {
+      display: block;
+      align-self: flex-end;
+      margin-right: 25px;
+      margin-bottom: 100px;
+    }
+  }
+
   &__link {
     color: $white;
     text-decoration: none;
     position: relative;
+
+    @include queries.mobile {
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 2rem;
+    }
 
     &::after {
       content: "";
@@ -41,6 +93,10 @@
       &::after {
         transform: scaleX(25);
         background-color: $white;
+
+        @include queries.mobile {
+          transform: scaleX(70);
+        }
       }
     }
   }
@@ -53,6 +109,15 @@
   &__img {
     width: 65%;
     display: block;
+
+    @include queries.tablet {
+      width: 55%;
+    }
+
+    @include queries.mobile {
+      width: 100%;
+    }
+
     &-desktop {
       width: 100%;
     }
@@ -69,12 +134,36 @@
     top: 35%;
     padding: 100px 0 50px 125px;
     background-color: $white;
+
+    @include queries.tablet {
+      padding: 25px 0 25px 25px;
+    }
+
+    @include queries.mobile {
+      position: inherit;
+      width: 100%;
+      padding: 25px;
+    }
   }
 
+  &__title {
+    @include queries.mobile {
+      text-align: center;
+    }
+  }
   &__description {
     margin-top: 30px;
     line-height: 1.8rem;
     color: $dark-gray;
+
+    @include queries.tablet {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    @include queries.mobile {
+      text-align: center;
+    }
   }
 }
 
@@ -82,9 +171,44 @@
   margin-top: 185px;
   margin-bottom: 185px;
 
-  &__header {
+  @include queries.mobile {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    @include queries.mobile {
+      text-align: center;
+    }
+  }
+
+  &-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-top: -40px;
+
+    @include queries.tablet {
+      margin-top: -20px;
+    }
+
+    @include queries.mobile {
+      margin-top: 0;
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+  }
+
+  &__all {
+    align-self: flex-end;
+
+    @include queries.tablet {
+      margin-right: 30px;
+    }
+
+    @include queries.mobile {
+      margin-right: unset;
+      align-self: center;
+    }
   }
 
   &__content {
@@ -93,12 +217,28 @@
     grid-template-columns: repeat(4, 256px);
     justify-content: space-between;
     row-gap: 40px;
+
+    @include queries.tablet {
+      grid-template-columns: repeat(2, 256px);
+      justify-content: space-evenly;
+      gap: 40px;
+    }
+
+    @include queries.mobile {
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
 }
 
 .card {
   height: 450px;
   position: relative;
+
+  @include queries.mobile {
+    height: auto;
+  }
 
   &:hover {
     cursor: pointer;
@@ -139,11 +279,56 @@
   }
 }
 
+.footer-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+
+  @include queries.tablet {
+    gap: 15px;
+  }
+
+  @include queries.mobile {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      display: block;
+      width: 1px;
+      height: 2px;
+      background-color: transparent;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(25);
+        background-color: $white;
+      }
+    }
+  }
+}
+
 .social-nets {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 15px;
+
+  @include queries.mobile {
+    justify-content: center;
+  }
 
   &__link {
     position: relative;
