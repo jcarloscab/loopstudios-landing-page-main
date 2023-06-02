@@ -52,6 +52,27 @@ h3 {
     z-index: 10;
   }
 }
+@media screen and (max-width: 375px) {
+  .logo--fixed {
+    position: fixed;
+  }
+}
+
+.open-menu {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .open-menu {
+    display: block;
+    cursor: pointer;
+    height: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .open-menu--hidden {
+    display: none;
+  }
+}
 
 .button {
   background-color: hsl(0, 0%, 100%);
@@ -105,6 +126,7 @@ h3 {
 .main-menu__close {
   width: 24px;
   display: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 375px) {
   .main-menu__close {
@@ -440,16 +462,6 @@ h3 {
   .header__title {
     width: 320px;
     padding: 15px;
-  }
-}
-
-.open-menu {
-  display: none;
-}
-@media screen and (max-width: 375px) {
-  .open-menu {
-    display: block;
-    height: 24px;
   }
 }
 

@@ -2,6 +2,28 @@
   @include queries.mobile {
     z-index: 10;
   }
+
+  &--fixed {
+    @include queries.mobile {
+      position: fixed;
+    }
+  }
+}
+
+.open-menu {
+  display: none;
+
+  @include queries.mobile {
+    display: block;
+    cursor: pointer;
+    height: 24px;
+  }
+
+  &--hidden {
+    @include queries.mobile {
+      display: none;
+    }
+  }
 }
 
 .button {
@@ -56,6 +78,7 @@
   &__close {
     width: 24px;
     display: none;
+    cursor: pointer;
 
     @include queries.mobile {
       display: block;

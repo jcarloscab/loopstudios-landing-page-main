@@ -41,12 +41,3 @@
     }
   }
 }
-
-.open-menu {
-  display: none;
-
-  @include queries.mobile {
-    display: block;
-    height: 24px;
-  }
-}
